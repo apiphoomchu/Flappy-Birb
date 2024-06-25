@@ -34,8 +34,11 @@ struct ContentView: View {
                     .frame(width: pipeWidth, height: geometry.size.height - bottomPipeY)
                     .position(x: pipeOffset + pipeWidth/2, y: (geometry.size.height + bottomPipeY) / 2)
                 
-                Circle()
-                    .fill(Color.yellow)
+                
+                Image("birb")
+                    .resizable()
+                    .frame(width: 150, height: 150)
+                    .clipShape(.circle)
                     .frame(width: birdSize, height: birdSize)
                     .position(birdPosition)
                 
